@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+ https://www.springframework.org/schema/beans/spring-beans.xsd
+ http://www.springframework.org/schema/context
+ http://www.springframework.org/schema/context/spring-context.xsd
+ ">
+	<!-- bean name is a variable decleration -->
+	<bean class="com.spring.core.Student" name="student1">
+		<!-- property name is set method mapp inisalaze the feild value -->
+		<property name="id">
+			<value>101</value>
+		</property>
+		<!-- name prperty shoud be same as field name -->
+		<property name="name">
+			<value>Anand</value>
+		</property>
+
+		<property name="address">
+			<value>Bangalore</value>
+		</property>
+	</bean>
+
+	<!-- wethout using value tab as a attribute in property tag -->
+	<bean class="com.spring.core.Student" name="student2">
+		<property name="id" value="102" />
+		<property name="name" value="Lokesh" />
+		<property name="address" value="Bidar" />
+	</bean>
+	
+<!-- p schema using  -->
+<bean class="com.spring.core.Student" name="student3" p:id="103" p:name="Anil" p:address="Kalaburagi"/>
+
+</beans>
